@@ -1,0 +1,103 @@
+<div>
+    <div class="hero">
+        <div class="bg-forest"></div>
+        <div class="header center text-white">
+            <h1 class="title">{{this.title}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="center info">
+    <h2>Information about: {{this.title}}</h2>
+    <span>{{this.info}}</span> 
+
+    <h3>Dimensions outside.</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>Exterior walls timber frame	length </td>
+                <td>5.11m x 2.44m</td>
+            </tr>
+            <tr>
+                <td>Protrusion knots in length and width</td>
+                <td>12cm X 2</td>
+            </tr>
+            <tr>
+                <td>Total length and width</td>
+                <td>5.35m X 2.68 (including knots)</td>
+            </tr>
+            <tr>
+                <td>Height to ridge with trailer</td>
+                <td>about 3.30m</td>
+            </tr>
+            <tr>
+                <td>Height to ridge without trailer	about</td>
+                <td>2.70m</td>
+            </tr>
+            <tr>
+                <td>Width</td>
+                <td>ca 3m</td>
+            </tr>
+        </tbody>
+    </table>
+
+	<h3>Dimensions inside.</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>Internal dimensions</td>
+                <td>lenght 5.02m, width2.35m</td>
+            </tr>
+            <tr>
+                <td>Internal dimensions bathroom</td>
+                <td>2.35m x 0.80m</td>
+            </tr>
+            <tr>
+                <td>Internally sized room</td>
+                <td>4.18m x 2.35m</td>
+            </tr>
+            <tr>
+                <td>Ceiling height wall</td>
+                <td>1.95m</td>
+            </tr>
+            <tr>
+                <td>Ceiling height ridge</td>
+                <td>2,5m</td>
+            </tr>
+        </tbody>
+    </table>
+	
+    <h3>Weights</h3>
+	<table>
+        <tbody>
+            <tr>
+                <td>Without trailer fully equipped</td>
+                <td>about 2000kg</td>
+            </tr>
+            <tr>
+                <td>With trailer</td>
+                <td>about 2575kg</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="center cards">
+    <img *ngFor="let image of this.images"  src="{{image}}" alt="">
+</div>
+
+<div class="center">
+    <app-cabin-builder></app-cabin-builder>
+</div>
+
+<div class="center">
+    <span>
+        <h3>*Basic model 1</h3>
+        <p>Includes pre-assembled frame without windows and doors, insulated floor, roof trusses with wind sheet protection, sheet metal roofs. Roof is uninsulated.</p>
+    </span>
+    <span>
+        <h3>**Basic model 2</h3>
+        <p>Includes pre-assembled frame with insulated floor and roof, outer roof in sheet metal and inner panel roof, windows, doors, lining, plinths and ceiling moldings.</p>
+    </span>
+</div>
+

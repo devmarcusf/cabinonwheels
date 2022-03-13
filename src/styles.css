@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: 'EB Garamond', serif;
+}
+
+.bg-dark {
+    background-color: #181D2B;
+}
+
+.bg-beige{
+    background-color: #FECB8C;
+}
+
+.text-white{
+    color: white;
+}

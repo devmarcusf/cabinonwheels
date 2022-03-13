@@ -1,0 +1,32 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div * {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 5rem;
+    text-align: center;
+
+}
+
+#logo {
+    width: 50vw;
+    max-width: 500px; 
+    min-width: 200px;
+    transform: translateX(0);
+}
+span {
+    width: 40vw;
+    font-size: 1.2rem;
+}
+
+span p::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

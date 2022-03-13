@@ -1,0 +1,25 @@
+
+
+<div class="builder">
+
+    <h2>Cabin builder</h2>
+    <form>
+        <div class="models">
+          <div *ngFor="let model of this.models">
+           <button (click)="this.modelsCheck(model,$event)" [disabled]="model.checked" >{{model.name}}</button>
+          </div>
+        </div>
+
+        <div *ngFor="let acc of this.acessories" class="form-check acc">
+          <div class="acc-item">
+            <input (change)="checked(acc.price,$event)"  class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              {{acc.name + " " + acc.price}}
+            </label>
+          </div>
+        </div>
+
+          <label>Sum: {{price}}</label>
+    </form>
+   
+</div>
