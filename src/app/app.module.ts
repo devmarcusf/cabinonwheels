@@ -12,10 +12,6 @@ import { CabinComponent } from './components/cabin/cabin.component';
 import { CabinBuilderComponent } from './components/cabin-builder/cabin-builder.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { environment } from '../environments/environment';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +26,7 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

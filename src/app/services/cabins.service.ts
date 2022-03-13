@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collectionData, collection } from '@angular/fire/firestore';
 import { Observable, Subject } from 'rxjs';
 
 
@@ -15,7 +14,7 @@ interface cabin {
 export class CabinsService {
 
 
-  constructor(private store:Firestore) {
+  constructor() {
     
 
   }
@@ -23,12 +22,6 @@ export class CabinsService {
   getCabins(){
 
     let cabins = new Subject<any[]>()
-    const c = collection(this.store, 'posts')
-    let items = collectionData(c)
-    items.subscribe( xs => {
-      cabins.next(xs)
-    })
-
     return cabins.asObservable()
   }
 
