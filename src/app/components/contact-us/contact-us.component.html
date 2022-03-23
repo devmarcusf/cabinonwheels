@@ -1,6 +1,9 @@
+<h1 *ngIf="this.lang == 'Eng'">Contact information</h1>
+<h1 *ngIf="this.lang == 'Swe'">Kontakt information</h1>
+
 
 <div class="center">
-    <form>
+    <form *ngIf="false">
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -11,5 +14,25 @@
          </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
+
+
+
+      <div>
+        <table class="table">
+          <tbody>
+            <tr>   
+              <td>Leif</td>
+              <td>070 678 65 84</td>
+            </tr>
+            <tr>   
+              <td>Niiki</td>
+              <td>070 569 24 46</td>
+              <td  *ngIf="this.lang == 'Eng'">English speaking</td>
+              <td  *ngIf="this.lang == 'Swe'">Engelsktalande</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 </div>
 

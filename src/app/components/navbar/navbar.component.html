@@ -12,6 +12,17 @@
               <li *ngFor="let item of navItems" class="nav-item">
                 <a [routerLink]="item.link" class="nav-link text-white " href="#">{{item.text}}</a>
               </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                
+                <span *ngIf="this.lang=='Swe'">🇸🇪</span>
+                <span *ngIf="this.lang=='Eng'">🇬🇧</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" (click)="this.setLang('Swe')" class="dropdown-item">Svenska</a>
+                    <a href="#" (click)="this.setLang('Eng')" class="dropdown-item">English</a>
+                </div>
+            </li>
             </ul>
           </div>
         </div>

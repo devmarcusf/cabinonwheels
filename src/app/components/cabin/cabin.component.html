@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="center info">
+<div *ngIf="this.lang =='Eng'" class="center info">
     <h2>Information about: {{this.title}}</h2>
     <span>{{this.info}}</span> 
 
@@ -82,6 +82,82 @@
     </table>
 </div>
 
+<div *ngIf="this.lang =='Swe'" class="center info">
+    <h2>Information om: {{this.title}}</h2>
+
+
+    <h3>Mått utvändigt</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>Utvändig väggar timmer stomme</td>
+                <td>5.11m x 2.44m</td>
+            </tr>
+            <tr>
+                <td>Utstick knutar på längden och bredden</td>
+                <td>12cm X 2</td>
+            </tr>
+            <tr>
+                <td>Total längd och bredd</td>
+                <td>5.35m X 2.68 (including knots)</td>
+            </tr>
+            <tr>
+                <td>Höjd till nock med trailer</td>
+                <td>about 3.30m</td>
+            </tr>
+            <tr>
+                <td>Höjd till nock utan trailer</td>
+                <td>2.70m</td>
+            </tr>
+            <tr>
+                <td>Bredd</td>
+                <td>ca 3m</td>
+            </tr>
+        </tbody>
+    </table>
+
+	<h3>Mått invändigt</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>Innermått</td>
+                <td>längd 5.02m, bredd 2.35m</td>
+            </tr>
+            <tr>
+                <td>Innermått badrum </td>
+                <td>2.35m x 0.80m</td>
+            </tr>
+            <tr>
+                <td>Innermått rum</td>
+                <td>4.18m x 2.35m</td>
+            </tr>
+            <tr>
+                <td>Takhöjd vägg</td>
+                <td>1.95m</td>
+            </tr>
+            <tr>
+                <td>Takhöjd nock</td>
+                <td>2,5m</td>
+            </tr>
+        </tbody>
+    </table>
+	
+    <h3>Vikter</h3>
+	<table>
+        <tbody>
+            <tr>
+                <td>Utan trailer fullt utrustad</td>
+                <td>ca 2000kg</td>
+            </tr>
+            <tr>
+                <td>Med trailer</td>
+                <td>ca 2575kg</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
 <div class="center cards">
     <img *ngFor="let image of this.images"  src="{{image}}" alt="">
 </div>
@@ -90,7 +166,7 @@
     <app-cabin-builder></app-cabin-builder>
 </div>
 
-<div class="center">
+<div *ngIf="this.lang == 'Eng'" class="center">
     <span>
         <h3>*Basic model 1</h3>
         <p>Includes pre-assembled frame without windows and doors, insulated floor, roof trusses with wind sheet protection, sheet metal roofs. Roof is uninsulated.</p>
@@ -98,6 +174,17 @@
     <span>
         <h3>**Basic model 2</h3>
         <p>Includes pre-assembled frame with insulated floor and roof, outer roof in sheet metal and inner panel roof, windows, doors, lining, plinths and ceiling moldings.</p>
+    </span>
+</div>
+
+<div *ngIf="this.lang == 'Swe'" class="center">
+    <span>
+        <h3>*Bas model 1</h3>
+        <p>Ingår färdig monterad stomme utan fönster och dörrar, isolerat bjälklag, takstolar med vindskivor, yttertak i plåt. Taket är oisolerat.</p>
+    </span>
+    <span>
+        <h3>**Bas model 2</h3>
+        <p>Ingår färdig monterad stomme med isolerat bjälklag och tak, yttertak i plåt samt innerpanel tak, fönster, dörrar, foder, socklar och taklister. Taket är isolerat.</p>
     </span>
 </div>
 

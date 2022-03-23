@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Language } from 'src/app/models/language';
+import { LangService } from 'src/app/services/lang.service';
 
 @Component({
   selector: 'app-cabin-builder',
@@ -25,9 +27,37 @@ export class CabinBuilderComponent implements OnInit {
     {name:'Trailer', price:65000}
   ]
 
+  lang:Language  
+
   price = 0
 
-  constructor() { }
+  constructor(private langService:LangService) {
+    this.lang = langService.getLanguage()
+    switch (this.lang) {
+      case 'Swe':
+        this.models = [
+          {name:"Model 1*", price:90000, checked:false },
+          {name:"Model 2**", price:125000, checked:false }
+        ]
+        
+        this.acessories = [
+          {name:'Klarlackad invändigt med panellack.', price:4500},
+          {name:'Plastmatta eller klickgolv i rummet', price:5000},
+          {name:'Våtrums matta', price:4000},
+          {name:'Våtrumsmatta golv och vägg', price:9000},
+          {name:'Badrum: toalett + handfat + dusch med varmvatten', price:32000},
+          {name:'Kök: 2st underskåp(60+60), 1st överskåp(60). Ekbänkskiva, diskho och gasolkök utan vatten', price:12000},
+          {name:'Kök: 2st underskåp(60+60), 1st överskåp(60). Bänkskiva, diskho och gasolkök med kallvatten', price:15000},
+          {name:'Elsystem. !2v och 220v med 12 voltsbelysning och 3 st eluttag 220v', price:12000},
+          {name:'Väggfast säng i dalastil 120cm utan madrass. (Kan även fås i 90 cm)', price:6500},
+          {name:'Trailer', price:65000}
+        ]
+        break;
+    
+      default:
+        break;
+    }
+  }
 
   ngOnInit(): void {
   }

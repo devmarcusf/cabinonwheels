@@ -16,3 +16,8 @@ a:hover .logo {
     stroke-width: 5px;
     stroke-dashoffset: 0;
 }
+
+
+li {
+    color:white;
+}
